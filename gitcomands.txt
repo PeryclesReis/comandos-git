@@ -4,17 +4,24 @@
 -git add...
 -git status => mostra status dos documentos (novos ou alterados)
 -git commit (-m) <= msg para o commit
+-git commit -a -m ou -am => A opção -a do comando git commit já efetua o rastreamento das mudanças,
+ adicionando-as à área de stage.
 -git log => Para verifi￿car o histórico das alterações gravadas no repositório
 -git log -n 2 => para verificar os dois últimos registros no repositório
+-git remote add origin https://github.com/PeryclesReis/projetos-estudo.git => adiciona o repositorio.
 -git push origin master => envia as alterações para o repositório remoto con￿figurado com o nome origin.
 -git clone urlDoRepositório => https://github.com/fulano/projeto.git => copia o código pra máquina.
 -git add .gitignore => para tirar da lista de arquivos não commitado ou adicionado
--git commit -a -m ou -am => A opção -a do comando git commit já efetua o rastreamento dasmudanças,
-			    adicionando-as à área de stage.
 -git log --oneline => Se quisermos um resumo bem conciso dos commits.
 -git log --stat => Para saber numero de linhas adicionado e removido.
 -git diff => Revisa a modi￿cação efetuada, verifi￿cando as diferenças entre o arquivo alterado e o que foi comitado anteriormente.
 -git diff exp:index.txt => para verificar mudanças do arquivo citado.
 -git diff --stage => Mostra as diferenças entre os arquivos na área de stage e a última versão que foi comitada.
 -git rm exp:produtos.html => Remove o arquivo e adição citado na stage.
+-git mv (nome do arquivo p/ nome que deseja) => para mudar nome de arquivos.
+-git checkout -- (nome do arquivo) => desfaz as alterações ainda não rastreadas (que não estão na área de stage).
+-git reset -- (nome do arquivo) => retira o arquivo da stage mas preserva tudo o que foi modi￿cado nesse arquivo sem,parametro reseta todos os arquivos em stage.
+-git reset --hard => desfaz todas as alterações e retira da stage.
+-git revert --no-edit(código do ultimo commit) => desfaz todas alterações depois do commit.
+-git reset --hard (código do ultimo commit)=> não recomendado usar pois reescreve o histórico do repositório.
 -git 
