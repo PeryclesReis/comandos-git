@@ -10,7 +10,9 @@
 -git log -n 2 => para verificar os dois últimos registros no repositório
 -git remote add origin https://github.com/PeryclesReis/projetos-estudo.git => adiciona o repositorio.
 -git push origin master => envia as alterações para o repositório remoto con￿figurado com o nome origin.
+-git push (nome repositorio) master => Para enviar os commits locais
 -git clone urlDoRepositório => https://github.com/fulano/projeto.git => copia o código pra máquina.
+-git clone file://ip/(caminho do repositorio) => Para obter uma cópia de um repositório Git
 -git add .gitignore => para tirar da lista de arquivos não commitado ou adicionado
 -git log --oneline => Se quisermos um resumo bem conciso dos commits.
 -git log --stat => Para saber numero de linhas adicionado e removido.
@@ -24,4 +26,15 @@
 -git reset --hard => desfaz todas as alterações e retira da stage.
 -git revert --no-edit(código do ultimo commit) => desfaz todas alterações depois do commit.
 -git reset --hard (código do ultimo commit)=> não recomendado usar pois reescreve o histórico do repositório.
--git 
+-git git init --bare (nome do arquivo) => para criar um "repositório servidor", ou seja, repositório remoto e
+o comando --bare serve para que o Git não crie um working tree (diretório de trabalho), impedindo que commits sejam efetuados diretamente no servidor.
+-git remote add servidor file://ip/(caminho do repositorio) => para adicionar o repositório remoto para "servidor"
+-git remote -v => Para listar os repositórios remotos
+-git remote rename (nome atual arquivo)(nome novo arquivo) => altera o name de um repositório remoto
+-git remote set-url (nome do repositório) e url => altera a url do repositório remoto
+-git pull "nome repositorio" master => para sincronizar o repositorio local com o servidor 
+-git branch -v => Se quisermos listar as branches existentes no nosso repositório com os commits associados.
+-git log --oneline --decorate --parents => para exibir o histórico resumido do nosso repositório como commit para o qual a master está apontado e os commits pai de cada commit.
+-git branch 'nome da branch' => para cria uma branch
+-git checkout -b 'nomedabranch' => para criar uma branch e entrar na branch
+-git branch -d 'nomedabranch' => para deletar uma branch
