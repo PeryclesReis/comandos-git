@@ -41,4 +41,6 @@ o comando --bare serve para que o Git não crie um working tree (diretório de t
 -git branch -d 'nomedabranch' => para deletar uma branch sem commit => com commit dentro da branch -D.
 -git branch --no-merged => verifica as branches que ainda não foram mescladas.
 -git rebase design => maneira alternativa de mesclar as alterações de duas branches que simpli￿ca o histórico do projeto.
--git
+-git branch -r => para informar as branchs remotas.
+-git branch -a => para informar as branchs locais.
+-git 
