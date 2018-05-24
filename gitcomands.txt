@@ -26,7 +26,7 @@
 -git reset --hard => desfaz todas as alterações e retira da stage todos .
 -git reset --hard (código do ultimo commit)=> não recomendado usar pois reescreve o histórico do repositório.
 -git revert --no-edit(código do ultimo commit) => desfaz todas alterações depois do commit.
--git git init --bare (nome do arquivo) => para criar um "repositório servidor", ou seja, repositório remoto e
+-git init --bare (nome do arquivo) => para criar um "repositório servidor", ou seja, repositório remoto e
 o comando --bare serve para que o Git não crie um working tree (diretório de trabalho), impedindo que commits sejam efetuados diretamente no servidor.
 -git remote add servidor file://ip/(caminho do repositorio) => para adicionar o repositório remoto para "servidor"
 -git remote -v => Para listar os repositórios remotos
@@ -43,4 +43,10 @@ o comando --bare serve para que o Git não crie um working tree (diretório de t
 -git rebase design => maneira alternativa de mesclar as alterações de duas branches que simpli￿ca o histórico do projeto.
 -git branch -r => para informar as branchs remotas.
 -git branch -a => para informar as branchs locais.
--git 
+-git tag (nome-da-tag) => para criar uma tag em um commit.
+-git tag -d (nome-da-tag) => para deletar a tag.
+-git tag -a(versao) -m(mensagem) => para criar uma tag anotada e colocar uma mensagem informativa.
+-git push oringin --tags => empurrar tag para remoto.
+-git rebase --continue => para finalizar a mesclagem que deu conflito.
+-git rebase --abort => para voltar o arquivo antes do conflito da mesclagem.
+-git rebase --skip => para ignorar o commit que gerou conflito.
