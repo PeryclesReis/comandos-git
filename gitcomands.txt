@@ -50,7 +50,7 @@ o comando --bare serve para que o Git não crie um working tree (diretório de t
 -git rebase --continue => para finalizar a mesclagem que deu conflito.
 -git rebase --abort => para voltar o arquivo antes do conflito da mesclagem.
 -git rebase --skip => para ignorar o commit que gerou conflito.
-
+-git commit --amend -m "Nova mensagem" => para mudar comentario do commite
 - amend => :x -> sai e salva do amend.
 - amend => :q sair sem salvar 
 	:q! sair sem salvar forçado.
