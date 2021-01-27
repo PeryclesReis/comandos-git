@@ -33,6 +33,10 @@ o comando --bare serve para que o Git não crie um working tree (diretório de t
 
 -git log => Para verifi￿car o histórico das alterações gravadas no repositório
 -git log -n 2 => para verificar os dois últimos registros no repositório
+-git log --since= (data da procura) exp: since= 2020-05-15. Traz os commits A PARTIR da data setada.
+-git log --until= (data da procura) exp: until= 2020-05-15. Traz os commits ANTERIORES a data setada.
+-git log --author= . traz os commits feito por algum nome setado.
+-git log --grep= 'sua busca aqui'. Traz os commits com a palavra chave passada ao grep. (MUITO BOM ESSE COMANDO)
 -git log --oneline => Se quisermos um resumo bem conciso dos commits.
 -git log --stat => Para saber numero de linhas adicionado e removido.
 -git log --oneline --decorate --parents => para exibir o histórico resumido do nosso repositório como commit para o qual a master está apontado e os commits pai de cada commit.
