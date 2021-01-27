@@ -1,48 +1,54 @@
 ﻿comandos git:
 
 -git init
--git add...
--git status => mostra status dos documentos (novos ou alterados)
--git commit (-m) <= msg para o commit
--git commit -a -m ou -am => A opção -a do comando git commit já efetua o rastreamento das mudanças,
- adicionando-as à área de stage.
--git log => Para verifi￿car o histórico das alterações gravadas no repositório
--git log -n 2 => para verificar os dois últimos registros no repositório
--git remote add origin https://github.com/PeryclesReis/projetos-estudo.git => adiciona o repositorio.
--git push origin master => envia as alterações para o repositório remoto con￿figurado com o nome origin.
--git push (nome repositorio) master => Para enviar os commits locais
--git clone urlDoRepositório => https://github.com/fulano/projeto.git => copia o código pra máquina.
--git clone file://ip/(caminho do repositorio) => Para obter uma cópia de um repositório Git
--git add .gitignore => para tirar da lista de arquivos não commitado ou adicionado
--git log --oneline => Se quisermos um resumo bem conciso dos commits.
--git log --stat => Para saber numero de linhas adicionado e removido.
--git diff => Revisa a modi￿cação efetuada, verifi￿cando as diferenças entre o arquivo alterado e o que foi comitado anteriormente.
--git diff (código-do-ultimo-commit) => Mostrar as alterações dentro e fora da stage
--git diff --stage (nome-do-arquivo) => Mostra as diferenças entre os arquivos na área de stage e a última versão que foi comitada.
--git rm exp:produtos.html => Remove o arquivo e adição citado na stage.
--git mv (nomedoarquivo-e-local-que-deseja+nomedoarquivo) => para mudar o arquivos de repositório.
--git checkout -- (nome do arquivo) => desfaz as alterações ainda não rastreadas (que não estão na área de stage).
--git reset -- (nome do arquivo) => retira o arquivo da stage mas preserva tudo o que foi modifi￿cado nesse arquivo sem,parametro reseta todos os arquivos em stage.
--git reset --hard => desfaz todas as alterações e retira da stage todos .
--git reset --hard (código do ultimo commit)=> não recomendado usar pois reescreve o histórico do repositório.
--git revert --no-edit(código do ultimo commit) => desfaz todas alterações depois do commit.
 -git init --bare (nome do arquivo) => para criar um "repositório servidor", ou seja, repositório remoto e
 o comando --bare serve para que o Git não crie um working tree (diretório de trabalho), impedindo que commits sejam efetuados diretamente no servidor.
 -git remote add servidor file://ip/(caminho do repositorio) => para adicionar o repositório remoto para "servidor"
 -git remote -v => Para listar os repositórios remotos
 -git remote rename (nome-atual-arquivo)(nome-novo-arquivo) => altera o name de um repositório remoto
 -git remote set-url (nome-do-repositório) e url => altera a url do repositório remoto
--git pull "nome-repositorio" master => para sincronizar o repositorio local com o servidor 
--git branch -v => Se quisermos listar as branches existentes no nosso repositório com os commits associados.
--git log --oneline --decorate --parents => para exibir o histórico resumido do nosso repositório como commit para o qual a master está apontado e os commits pai de cada commit.
+-git remote add origin https://github.com/PeryclesReis/projetos-estudo.git => adiciona o repositorio.
+-git add...
+-git add .gitignore => para tirar da lista de arquivos não commitado ou adicionado
+-git status => mostra status dos documentos (novos ou alterados)
+-git commit (-m) <= msg para o commit
+-git commit -a -m ou -am => A opção -a do comando git commit já efetua o rastreamento das mudanças,
+ adicionando-as à área de stage.
+
+-git push origin master => envia as alterações para o repositório remoto con￿figurado com o nome origin.
+-git push (nome repositorio) master => Para enviar os commits locais
+-git pull "nome-repositorio" master => para sincronizar o repositorio local com o servidor
+-git clone urlDoRepositório => https://github.com/fulano/projeto.git => copia o código pra máquina.
+-git clone file://ip/(caminho do repositorio) => Para obter uma cópia de um repositório Git
+
 -git branch 'nome-da-branch' => para cria uma branch
--git checkout 'nomedabranch' => para trocar de branch.
--git checkout -b 'nomedabranch' => para criar uma branch e entrar na branch
+-git branch -v => Se quisermos listar as branches existentes no nosso repositório com os commits associados.
 -git branch -d 'nomedabranch' => para deletar uma branch sem commit => com commit dentro da branch -D.
 -git branch --no-merged => verifica as branches que ainda não foram mescladas.
--git rebase design => maneira alternativa de mesclar as alterações de duas branches que simplifi￿ca o histórico do projeto.
 -git branch -r => para informar as branchs remotas.
 -git branch -a => para informar as branchs locais.
+-git checkout -- (nome do arquivo) => desfaz as alterações ainda não rastreadas (que não estão na área de stage).
+-git checkout 'nomedabranch' => para trocar de branch.
+-git checkout -b 'nomedabranch' => para criar uma branch e entrar na branch
+
+-git log => Para verifi￿car o histórico das alterações gravadas no repositório
+-git log -n 2 => para verificar os dois últimos registros no repositório
+-git log --oneline => Se quisermos um resumo bem conciso dos commits.
+-git log --stat => Para saber numero de linhas adicionado e removido.
+-git log --oneline --decorate --parents => para exibir o histórico resumido do nosso repositório como commit para o qual a master está apontado e os commits pai de cada commit.
+-git diff => Revisa a modificação efetuada, verifincando as diferenças entre o arquivo alterado e o que foi comitado anteriormente.
+-git diff (código-do-ultimo-commit) => Mostrar as alterações dentro e fora da stage
+-git diff --stage (nome-do-arquivo) => Mostra as diferenças entre os arquivos na área de stage e a última versão que foi comitada.
+-git rm exp:produtos.html => Remove o arquivo e adição citado na stage.
+-git mv (nomedoarquivo-e-local-que-deseja+nomedoarquivo) => para mudar o arquivos de repositório.
+
+
+-git reset -- (nome do arquivo) => retira o arquivo da stage mas preserva tudo o que foi modifi￿cado nesse arquivo sem,parametro reseta todos os arquivos em stage.
+-git reset --hard => desfaz todas as alterações e retira da stage todos .
+-git reset --hard (código do ultimo commit)=> não recomendado usar pois reescreve o histórico do repositório.
+-git revert --no-edit(código do ultimo commit) => desfaz todas alterações depois do commit.
+
+-git rebase design => maneira alternativa de mesclar as alterações de duas branches que simplifi￿ca o histórico do projeto.
 -git tag (nome-da-tag) => para criar uma tag em um commit.
 -git tag -d (nome-da-tag) => para deletar a tag.
 -git tag -a(versao) -m(mensagem) => para criar uma tag anotada e colocar uma mensagem informativa.
